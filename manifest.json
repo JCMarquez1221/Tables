@@ -1,0 +1,70 @@
+{
+    "_version": "1.1.0",
+    "sap.app": {
+        "_version": "1.1.0",
+        "id": "spinifexWebDemo",
+        "type": "application",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "applicationVersion": {
+            "version": "1.0.0"
+        }
+    },
+    "sap.ui": {
+        "_version": "1.1.0",
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_bluecrystal"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.1.0",
+        "resources": {
+        },
+        "rootView": {
+            "type": "JS",
+            "viewName": "spinifex.webdemo.views.Main"
+        },
+        "dependencies": {
+            "minUI5Version": "1.40",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.unified": {}
+            }
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "JS",
+                "viewPath": "spinifex.webdemo.views",
+                "controlId": "spinApp",
+                "controlAggregation": "pages",
+                "transition": "slide",
+                "bypassed": {
+                    "target": "home"
+                }
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "home",
+                    "target": "home"
+                }
+            ],
+            "targets": {
+                "home": {
+                    "viewId": "id.Home",
+                    "viewName": "Home",
+                    "viewLevel": 1,
+                    "title": "{i18n>TXT_HOME}",
+                    "transition": "fade"
+                }
+            }
+        }
+    }
+}

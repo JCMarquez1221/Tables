@@ -1,0 +1,12 @@
+body {
+   margin: 0;
+}
+/* .sapMListTblCell {
+   background-color: rgb(255, 145, 145);
+} */
+.sapMLabel {
+   padding: 12px;
+}
+.sapMListTblCell {
+   text-align: center;
+}
